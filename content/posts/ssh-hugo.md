@@ -5,4 +5,4 @@ title = 'Ssh Hugo'
 slug = 'ssh-hugo'
 +++
 ### summary
-hugo is a popular static site builder
+hugo is a popular static site builder.

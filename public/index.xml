@@ -7,8 +7,16 @@
     <generator>Hugo -- 0.146.7</generator>
     <language>zh-cn</language>
     <copyright>版权归 withme.top 所有</copyright>
-    <lastBuildDate>Thu, 24 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.withme.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ssh Hugo</title>
+      <link>https://blog.withme.top/posts/ssh-hugo/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.withme.top/posts/ssh-hugo/</guid>
+      <description>&lt;h3 id=&#34;summary&#34;&gt;summary&lt;/h3&gt;
+&lt;p&gt;hugo is a popular static site builder.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>cloudflared</title>
       <link>https://blog.withme.top/posts/cloudflared/</link>
