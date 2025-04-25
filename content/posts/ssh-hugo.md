@@ -17,26 +17,27 @@ CLOUDFLARED_HOSTNAME=<your cloudflared domain>
 LOCAL_PORT=<the port to establish the network bridge with cloudflare>
 CLOUDFLARED_PATH=/home/lxz/app/cloudflared/cloudflared
 
-# 暂时性使用cloudflared
+# start cloudflared
 nohup $CLOUDFLARED_PATH access tcp --hostname $CLOUDFLARED_HOSTNAME --url 127.0.0.1:$LOCAL_PORT >/dev/null 2>/dev/null &
-
+# hugo build
 cd $HUGO_DIR
-# 构建
 hugo
-# 上传到github
+# upload to github
 git add .
 git commit -m "$(date)"
 git push
-# 压缩
+# tar compression
 cd $HUGO_DIR/public
 tar -cf site.tar.gz *
-# sftp 上传
+# sftp upload
 sftp -P $LOCAL_PORT $REMOTE_USER@127.0.0.1  <<EOF
 cd /home/$REMOTE_USER
 put site.tar.gz
 bye
 EOF
-# ssh 控制
+# delete local file
+rm site.tar.gz
+# ssh operation
 ssh "$REMOTE_USER@127.0.0.1" -p "$LOCAL_PORT" "
     cd $WRB_DIR && \
     rm -rf ./* && \
@@ -44,9 +45,43 @@ ssh "$REMOTE_USER@127.0.0.1" -p "$LOCAL_PORT" "
     tar xf site.tar.gz && \
     rm site.tar.gz
 "
-
-# 关闭 cloudflared
+# stop cloudflared
 pkill -f cloudflared
-# 删除本地文件
+```
+for those who don't need to use the cloudflare,they can use the below scritpt.
+```bash
+#!/bin/bash
+HUGO_DIR=<your hugo dir>
+REMOTE_USER=<your remote machine user>
+WRB_DIR=<your website dir>
+SFTP_REMOTE_ADDR=
+SSH_REMOTE_ADDR=
+REMOTE_PORT=
+
+# hugo build
+cd $HUGO_DIR
+hugo
+# upload to github
+git add .
+git commit -m "$(date)"
+git push
+# tar compression
+cd $HUGO_DIR/public
+tar -cf site.tar.gz *
+# sftp upload
+sftp -P $REMOTE_PORT $REMOTE_USER@$SFTP_REMOTE_ADDR  <<EOF
+cd /home/$REMOTE_USER
+put site.tar.gz
+bye
+EOF
+# delete local file
 rm site.tar.gz
+# ssh operation
+ssh "$REMOTE_USER@$SSH_REMOTE_ADDR" -p "$REMOTE_PORT" "
+    cd $WRB_DIR && \
+    rm -rf ./* && \
+    mv /home/$REMOTE_USER/site.tar.gz . && \
+    tar xf site.tar.gz && \
+    rm site.tar.gz
+"
 ```
