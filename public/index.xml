@@ -15,7 +15,9 @@
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.withme.top/posts/ssh-hugo/</guid>
       <description>&lt;h3 id=&#34;summary&#34;&gt;summary&lt;/h3&gt;
-&lt;p&gt;hugo is a popular static site builder.&lt;/p&gt;</description>
+&lt;p&gt;hugo is a popular static site builder.We need to edit the site file in markdown format in our computer.When we want to publish our site,we need to push the code to the remote computer.So that,for convenience,I write a bash script to automatically complete the task.&lt;/p&gt;
+&lt;h3 id=&#34;code&#34;&gt;code&lt;/h3&gt;
+&lt;p&gt;In the below code,I run the cloudflared,because my remote host has only ipv6,and my virtual machine can&amp;rsquo;t access the ipv6 network conveniently.Through cloudflared,I use it to get achieve an effect like proxy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>cloudflared</title>
