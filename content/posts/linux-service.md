@@ -20,6 +20,7 @@ Group=<group>
 
 [Install]
 WantedBy=multi-user.target
+```
 ### setup
 we need to put the file to `/etc/systemd/system` and name it like `halo.service`
 ### command
@@ -28,4 +29,3 @@ we need to put the file to `/etc/systemd/system` and name it like `halo.service`
 `systemctl restart <name>` to restart it  
 `systemctl stop <name>` to stop it  
 `systemctl enable <name>` to let it run after reboot  
-```
