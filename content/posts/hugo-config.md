@@ -1,0 +1,113 @@
+---
+date: '2025-04-20'
+draft: false
+title: hugo papermod 配置
+slug: hugo-config
+---
+### 概述
+搭建自己的博客很有成就感，虽然自己很少写文章。但是在搭建过程可以享受快乐。出于稳定性和速度，我选择使用hugo生成静态博客，在cloudflare pages上部署，加上cloudflare的强制cdn缓存。以下是我的配置，供参考。
+### 不足之处
+cloudflare在国内的部分地区连接失败，其他大多地区倒是很绿。少数地区我就不管它了。
+### 配置文件
+```yaml
+# url前缀
+baseURL: "https://blog.withme.top/"
+# 题目
+title: "withme's blog"
+# 主题
+theme: PaperMod
+# 语言
+defaultContentLanguage: zh-cn
+# 允许爬虫
+enableRobotsTXT: true
+# 不发布草稿 未来的 过期的
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+# 文章里面可以写表情包
+enableEmoji: true
+# 构建时清除文件夹
+cleanDestinationDir: true
+# 底部自定义版权声明
+copyright: 版权归 withme.top 所有
+minify:
+  # xml不压缩
+  disableXML: true
+  # html等压缩
+  minifyOutput: true
+params:
+  # 底部留言
+  footer:
+    text: 热爱生活
+  # 是的google分析等有用
+  env: production
+  # html 标题
+  title: "withme's blog"
+  # html描述
+  description: "happy life"
+  # html关键字
+  keywords: [blog]
+  # 文章作者
+  author: withme
+  # 日期格式
+  DateFormat: "2006-01-02"
+  # 默认颜色
+  defaultTheme: dark
+  # 允许改变颜色
+  disableThemeToggle: false
+  # 显示阅读时间
+  ShowReadingTime: true
+  # 不显示分享按钮
+  ShowShareButtons: false
+  # 不显示面包屑
+  ShowBreadCrumbs: false
+  # 代码块有复制按钮
+  ShowCodeCopyButtons: true
+  # 显示文章字数
+  ShowWordCount: true
+  # 第一篇文章特别显示
+  disableSpecial1stPost: true
+  # 点击回到头部
+  disableScrollToTop: false
+  # 关闭评论
+  comments: false
+  # 显示目录
+  showtoc: true
+  # toc是否自动打开
+  tocopen: false
+  assets:
+    # 语法高亮
+    disableHLJS: false
+    # 给css文件添加hash值
+    disableFingerprinting: true
+    # favicon
+    favicon: /favicon.ico
+  # 左上角
+  label:
+    #文字
+    text: "withme"
+  # papermod配置首页模式
+  homeInfoParams:
+    Title: "你好 \U0001F44B"
+    Content: 欢迎来到我的博客
+  # 社交icon
+  socialIcons:
+    - name: github
+      url: "https://github.com/0031400"
+  # google分析
+  analytics:
+    google:
+      SiteVerificationTag: "G-P3Z1RE78CQ"
+# 嵌入css类 使用自定义主题
+pygmentsUseClasses: true
+markup:
+  highlight:
+    # 每行要不要加个锚点
+    anchorLineNos: false
+    # 猜测语言类型
+    guessSyntax: true
+    # 行号
+    lineNos: true
+    # 风格
+    style: github
+```
