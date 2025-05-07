@@ -12,10 +12,9 @@ alist is a popular open source tool which can help you control your many network
 taoSync [https://github.com/dr34m-cn/taosync](https://github.com/dr34m-cn/taosync)
 alist [https://github.com/AlistGo/alist](https://github.com/AlistGo/alist)
 ### installation
-taoSync is written in python.And it has a web frontend.We need to compile the frontent.I help you to compile it.The below is the file link. [https://alist.0031400.xyz/d/public/taoSync/0.2.7/taosync-v0.2.7.tar.gz](https://alist.0031400.xyz/d/public/taoSync/0.2.7/taosync-v0.2.7.tar.gz)  
+taoSync is written in python.And it has a web frontend.We need to compile the frontent.I help you to compile it.The below is the file link. [taosync-v0.2.7.tar.gz](taosync-v0.2.7.tar.gz)  
 ```bash
 cd <the folder you want put the app>
-wget https://alist.0031400.xyz/d/public/taoSync/0.2.7/taosync-v0.2.7.tar.gz
 tar xf taosync-v0.2.7.tar.gz
 pip install -r requirements.txt
 python main.py
