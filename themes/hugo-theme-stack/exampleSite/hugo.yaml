@@ -1,69 +1,79 @@
-# 网站url
-baseurl: https://blog.withme.top/
-# 网站语言
+baseurl: https://example.com/
 languageCode: en-us
-# 网站主题
 theme: hugo-theme-stack
-# 网站标题
-title: withme's blog
-# 版权所有
-copyright: withme
-# 默认语言
+title: Example Site
+copyright: Example Person
+
+# Theme i18n support
+# Available values: ar, bn, ca, de, el, en, es, fr, hu, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
 DefaultContentLanguage: en
-# 是否存在sjk语言 就是一个文字是多个utf-8大小 比如中文
+
+# Set hasCJKLanguage to true if DefaultContentLanguage is in [zh-cn ja ko]
+# This will make .Summary and .WordCount behave correctly for CJK languages.
 hasCJKLanguage: false
-# 构建时清除文件夹
-cleanDestinationDir: true
-# 语言设置
+
 languages:
     en:
         languageName: English
-        title: withme's blog
+        title: Example Site
         weight: 1
         params:
             sidebar:
-                subtitle: a happy person's blog
+                subtitle: Example description
+    zh-cn:
+        languageName: 中文
+        title: 演示站点
+        weight: 2
+        params:
+            sidebar:
+                subtitle: 演示说明
+    ar:
+        languageName: عربي
+        languagedirection: rtl
+        title: موقع تجريبي
+        weight: 3
+        params:
+            sidebar:
+                subtitle: وصف تجريبي
+
 services:
+    # Change it to your Disqus shortname before using
     disqus:
-        shortname:
-    # google 网站分析
+        shortname: "hugo-theme-stack"
+    # GA Tracking ID
     googleAnalytics:
         id:
-# 分页
+
 pagination:
     pagerSize: 3
-# 永久连接
+
 permalinks:
-    post: /p/:year/:month:/:day/:slug/
+    post: /p/:slug/
     page: /:slug/
+
 params:
-    # 文章所属文件夹
     mainSections:
         - post
-    # 封面参数
     featuredImageField: image
-    # rss是否全文
-    rssFullContent: false
-    # favicon
-    favicon: /favicon.ico
-    # 页脚
+    rssFullContent: true
+    favicon: # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+
     footer:
-        since: 2025
-        # 自己的文字
-        customText: love life
-    # 时间格式
+        since: 2020
+        customText:
+
     dateFormat:
         published: Jan 02, 2006
         lastUpdated: Jan 02, 2006 15:04 MST
-    # 边栏
+
     sidebar:
         emoji: 🍥
-        subtitle: love life
+        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         avatar:
             enabled: true
             local: true
             src: img/avatar.png
-    # 文章
+
     article:
         math: false
         toc: true
@@ -71,9 +81,9 @@ params:
         license:
             enabled: true
             default: Licensed under CC BY-NC-SA 4.0
-    # 评论系统
+
     comments:
-        enabled: false
+        enabled: true
         provider: disqus
 
         disqusjs:
@@ -172,6 +182,12 @@ params:
             - type: toc
 
     opengraph:
+        twitter:
+            # Your Twitter username
+            site:
+
+            # Available values: summary, summary_large_image
+            card: summary_large_image
 
     defaultImage:
         opengraph:
@@ -197,19 +213,24 @@ params:
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
     main: []
+
     social:
         - identifier: github
           name: GitHub
-          url: https://github.com/0031400
+          url: https://github.com/CaiJimmy/hugo-theme-stack
           params:
               icon: brand-github
-# 联系度 和搜索相关
+
+        - identifier: twitter
+          name: Twitter
+          url: https://twitter.com
+          params:
+              icon: brand-twitter
+
 related:
-    # 是否和时间相关
     includeNewer: true
-    # 阈值
     threshold: 60
-    toLower: true
+    toLower: false
     indices:
         - name: tags
           weight: 100
