@@ -2,7 +2,7 @@
 title: "php webdav"
 description: "A simple php webdav server using sabre"
 date: 2025-05-07T19:37:35+08:00
-image: "cover.png"
+image: "image.png"
 math: false
 draft: false
 ---
@@ -61,7 +61,7 @@ You need to write the text like below to your htdigest file.
 Remove the annatation in the file above and put the all files to your server.
 ### the zip I build
 I build the above file and add the basic auth.The username is usernmae.The password is the password.  
-The download link is [488c0174-750c-4f04-993c-35325178cdd6.zip](488c0174-750c-4f04-993c-35325178cdd6.zip)  
+The download link is [webdav.zip](webdav.zip) 
 You can directly use it after change the username and password.
 ### config for alist
 |name|value|

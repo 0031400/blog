@@ -2,7 +2,7 @@
 title: "{{ .Name}}"
 description: 
 date: {{ .Date }}
-image: "cover.png"
+image: "image.png"
 math: false
 draft: false
 ---

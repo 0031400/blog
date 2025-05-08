@@ -2,7 +2,7 @@
 title: "taoSync"
 description: "TaoSync is a useful alist timing backup tool."
 date: 2025-05-07T19:34:42+08:00
-image: "cover.png"
+image: "image.png"
 math: false
 draft: false
 ---
@@ -12,7 +12,7 @@ alist is a popular open source tool which can help you control your many network
 taoSync [https://github.com/dr34m-cn/taosync](https://github.com/dr34m-cn/taosync)
 alist [https://github.com/AlistGo/alist](https://github.com/AlistGo/alist)
 ### installation
-taoSync is written in python.And it has a web frontend.We need to compile the frontent.I help you to compile it.The below is the file link. [taosync-v0.2.7.tar.gz](taosync-v0.2.7.tar.gz)  
+taoSync is written in python.And it has a web frontend.We need to compile the frontent.I help you to compile it.The below is the file link. [taosync-v0.2.7.tar.gz](taosync-v0.2.7.tar.gz)
 ```bash
 cd <the folder you want put the app>
 tar xf taosync-v0.2.7.tar.gz
@@ -85,6 +85,6 @@ You should put the files in the folder `taosync/frontend/dist` to the folder `fr
     └── system
 ```
 ### screenshot
-![image](11f28552-5c0d-4905-b733-100aa7578c73.png)
-![image](1914f1ac-5f3a-4842-adbb-52cd5f34ea28.png)
-![image](7080a5b4-dd83-4054-80e5-5a3270fa90f9.png)
+![one.png](one.png)
+![two.png](two.png)
+![three.png](three.png)

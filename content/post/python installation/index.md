@@ -2,7 +2,7 @@
 title: "python installation"
 description: 
 date: 2025-05-07T19:40:47+08:00
-image: "cover.png"
+image: "image.png"
 math: false
 draft: false
 ---
