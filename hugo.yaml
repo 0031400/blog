@@ -1,5 +1,5 @@
 # 网站url
-baseurl: https://blog.withme.top/
+# baseurl: https://blog.withme.top/
 # 网站语言
 languageCode: en-us
 # 网站主题
@@ -34,7 +34,7 @@ pagination:
     pagerSize: 3
 # 永久连接
 permalinks:
-    post: /p/:year/:month:/:day/:slug/
+    post: /:year/:month:/:day/:slug/
     page: /:slug/
 params:
     # 文章所属文件夹
@@ -213,10 +213,8 @@ related:
     indices:
         - name: tags
           weight: 100
-
         - name: categories
           weight: 200
-
 markup:
     goldmark:
         extensions:
@@ -245,4 +243,3 @@ markup:
         lineNoStart: 1
         lineNos: true
         lineNumbersInTable: true
-        tabWidth: 4
